@@ -103,7 +103,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # carpeta de colección (collectstatic)
+STATICFILES_DIRS = [BASE_DIR / 'static'] # archivos fuente en desarrollo
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -138,6 +139,10 @@ JAZZMIN_SETTINGS = {
     "site_title": "WeArtificial Launchpad",
     "site_header": "WeArtificial Admin",
     "site_brand": "WeArtificial",
+    "site_logo": "img/logo.png",
+    "site_icon": "img/logo.png",
+    "login_logo": "img/logo.png",
+    "login_logo_dark": "img/logo.png",
     "welcome_sign": "Panel de Administración",
     "copyright": "WeArtificial Launchpad",
     "search_model": ["users.User", "projects.Project"],
@@ -159,40 +164,10 @@ JAZZMIN_SETTINGS = {
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
     "related_modal_active": True,
-    "custom_css": None,
+    "custom_css": "custom.css",
     "custom_js": None,
     "use_google_fonts_cdn": True,
-    "show_ui_builder": True,
+    "show_ui_builder": False,
 }
 
-JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
-    "body_small_text": True,
-    "brand_small_text": False,
-    "brand_colour": "navbar-secondary",
-    "accent": "accent-primary",
-    "navbar": "navbar-gray-dark navbar-dark",
-    "no_navbar_border": False,
-    "navbar_fixed": True,
-    "layout_boxed": False,
-    "footer_fixed": False,
-    "sidebar_fixed": False,
-    "sidebar": "sidebar-dark-info",
-    "sidebar_nav_small_text": False,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": False,
-    "theme": "solar",
-    "dark_mode_theme": "darkly",
-    "button_classes": {
-        "primary": "btn-primary",
-        "secondary": "btn-secondary",
-        "info": "btn-info",
-        "warning": "btn-warning",
-        "danger": "btn-danger",
-        "success": "btn-success"
-    }
-}
+
