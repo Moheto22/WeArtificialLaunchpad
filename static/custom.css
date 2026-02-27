@@ -1110,6 +1110,11 @@ a {
   transition: var(--transition);
 }
 
+a:link,
+a:visited {
+  color: var(--text-primary) !important;
+}
+
 a:hover {
   color: var(--accent-hover);
   text-decoration: underline;
@@ -1279,4 +1284,66 @@ a:hover {
   background: rgba(255, 255, 255, 0.08) !important;
   color: var(--text-muted) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ---------------------------------------------------------------------------
+   29. SELECTOR DE PERMISOS — FilteredSelectMultiple (grupos/usuarios)
+   --------------------------------------------------------------------------- */
+
+/* Contenedor principal — Django admin aplica background:#fff aquí */
+.selector {
+  background: transparent !important;
+}
+
+/* Columnas izquierda/derecha */
+.selector-available,
+.selector-chosen {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+/* Cabeceras "Available permissions" / "Chosen permissions" */
+.selector-available h2,
+.selector-chosen h2 {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: var(--radius) var(--radius) 0 0 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 8px 12px !important;
+  margin: 0 !important;
+}
+
+/* Cajas de selección */
+.selector-available select,
+.selector-chosen select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #f0f0f0 !important;
+  border-radius: 0 0 var(--radius) var(--radius) !important;
+}
+
+/* Columna de botones Add/Remove */
+.selector-chooser {
+  background: transparent !important;
+}
+
+.selector-chooser a {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: var(--radius) !important;
+}
+
+.selector-chooser a:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Input de filtro sobre cada lista */
+.selector-filter input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius) !important;
 }
